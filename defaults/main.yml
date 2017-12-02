@@ -1,0 +1,5 @@
+---
+sizeup_pkg: SizeUp
+sizeup_domain: "com.irradiatedsoftware.{{ sizeup_pkg }}"
+sizeup_defaults: {}
+...

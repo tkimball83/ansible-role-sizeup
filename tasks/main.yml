@@ -1,12 +1,12 @@
 ---
-- name: Ensure that the sizeup package is installed
+- name: Ensure that the {{ sizeup_package }} package is installed
   tags: sizeup
   homebrew_cask:
     name: "{{ sizeup_package|lower }}"
     state: present
   register: sizeup_homebrew_cask
 
-- name: Attempting to apply sizeup configurations
+- name: Attempting to apply {{ sizeup_package }} configurations
   tags: sizeup
   osx_defaults:
     domain: "{{ sizeup_domain }}"

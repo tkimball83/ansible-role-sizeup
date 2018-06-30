@@ -2,12 +2,11 @@
 - name: Ensure that the sizeup package is installed
   tags: sizeup
   homebrew_cask:
-    name: "{{ sizeup_pkg|lower }}"
+    name: "{{ sizeup_package|lower }}"
     state: present
   register: sizeup_homebrew_cask
-  when: sizeup_pkg is defined
 
-- name: Applying sizeup configurations
+- name: Attempting to apply sizeup configurations
   tags: sizeup
   osx_defaults:
     domain: "{{ sizeup_domain }}"
@@ -17,9 +16,9 @@
     value: "{{ item.value.value }}"
   with_dict: "{{ sizeup_defaults }}"
   when:
-    - sizeup_domain is defined
     - item.key is defined
     - item.value.type is defined
     - item.value.value is defined
-    - sizeup_homebrew_cask|success
+    - sizeup_defaults|length > 0
+    - sizeup_homebrew_cask is success
 ...

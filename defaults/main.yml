@@ -1,5 +1,5 @@
 ---
-sizeup_defaults: {}
+sizeup_defaults: []
 sizeup_domain: "com.irradiatedsoftware.{{ sizeup_package }}"
 sizeup_package: SizeUp
 ...

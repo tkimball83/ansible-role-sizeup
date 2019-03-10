@@ -14,7 +14,7 @@ This role requires homebrew and homebrew cask to be installed
 
 Available variables are listed below, along with default values:
 
-    sizeup_defaults: {}
+    sizeup_defaults: []
     sizeup_domain: "com.irradiatedsoftware.{{ sizeup_package }}"
     sizeup_package: SizeUp
 
@@ -29,40 +29,40 @@ None
       roles:
         - role: tkimball83.sizeup
           sizeup_defaults:
-            CenterNonResizableWindows:
+            - name: CenterNonResizableWindows
               type: bool
               value: true
-            KeepWindowsInBounds:
+            - name: KeepWindowsInBounds
               type: bool
               value: true
-            MenuEnabled:
+            - name: MenuEnabled
               type: bool
               value: true
-            MultiMonitorResizeWindowProportionally:
+            - name: MultiMonitorResizeWindowProportionally
               type: bool
               value: true
-            SUEnableAutomaticChecks:
+            - name: SUEnableAutomaticChecks
               type: bool
               value: true
-            ShortcutsDisabled:
+            - name: ShortcutsDisabled
               type: bool
               value: false
-            ShowOverlay:
+            - name: ShowOverlay
               type: bool
               value: true
-            ShowPrefsOnLaunch:
+            - name: ShowPrefsOnLaunch
               type: bool
               value: false
-            ShowPrefsOnNextStart:
+            - name: ShowPrefsOnNextStart
               type: bool
               value: false
-            ShowTooltips:
+            - name: ShowTooltips
               type: bool
               value: false
-            TakeDrawersIntoAccount:
+            - name: TakeDrawersIntoAccount
               type: bool
               value: true
-            suppressMenuBarDisabledPopup:
+            - name: suppressMenuBarDisabledPopup
               type: bool
               value: true
 
